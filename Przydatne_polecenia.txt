@@ -56,3 +56,62 @@ pip install -r requirements.txt
 
 Dodatkowo do zainstalowania: 
 pip install pandas scikit-learn matplotlib seaborn mlflow catboost optuna plotly shap nannyml loguru
+
+Przygotowanie środowiska i zabezpieczenie głównej gałęzi
+Main -> Settings -> Branches -> Branch protection rule
+Branch name pattern (wpisujemy main) i wybieramy
+    a - Require a pull request before merging + Require approvals
+    b - Require status checks to pass before merging
+
+Zabezpieczenie 
+
+Przygotowanie środowiska w VSCode
+
+Przechodzimy do naszego Repozytorium a następnie w terminalu wpisujemy
+
+ - utworzenie środowiska python 3.11
+
+py -3.11 -m venv .venv
+lub
+d:\python311\python -m venv .venv 
+ 
+
+Sprawdzenie zainstalowanej wersji Pythona.
+Można to sprawdzić w VSCode otwierając plik pyenv.cfg znajdujący się w .venv
+
+następnie aktywujemy środowisko - najlepiej w CMD
+
+cd .venv
+cd .\Scripts\
+activate.bat
+
+-- Ścieżka do pliku activate w środowisku .venv
+.\.venv\Scripts\activate
+
+----------------------------------------------
+
+pomocniczo gdy nie można wyświetlić środowiska które zostało aktywowane
+
+wynieramy prawy róg gdzie jest jakieś środowisko , klikamy i wybieramy Select Another Kernel" 
+następnie wpisujemy ścieżkę do środowiska.
+W moim przypadku D:\Repo\PZ_MLOps\.venv\Scripts\python.exe
+
+----------------------------------------------
+
+requirements.txt - plik z zapisanymi bibliotekami niezbędnymi do odtworzenia środowiska
+
+Zapis do pliku 
+
+pip freeze > requirements.txt
+
+dołożenie nowych bibliotek
+
+pip freeze >> requirements.txt
+
+odtworzenie z pliku 
+
+pip install -r requirements.txt
+
+
+Dodatkowo do zainstalowania: 
+pip install pandas scikit-learn matplotlib seaborn mlflow catboost optuna plotly shap nannyml loguru
