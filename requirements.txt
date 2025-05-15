@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+joblib
+shap
+tqdm
+optuna
+mlflow
+xgboost
+lightgbm
+catboost
+kaggle
+mlflow

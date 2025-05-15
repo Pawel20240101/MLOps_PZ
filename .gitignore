@@ -11,6 +11,7 @@ __pycache__/
 build/
 develop-eggs/
 dist/
+.kaggle/
 downloads/
 eggs/
 .eggs/
@@ -172,3 +173,19 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+
+catboost_info
+#.ipynb_checkpoints
+kaggle.json
+#.venv
+#__pycache__
+*.pyc
+mlruns
+mlartifacts
+.Backup
+models
+eksploracja
+reports
+results
