@@ -1,0 +1,54 @@
+.
+├── .devcontainer/
+│   └── devcontainer.json
+├── notebooks/
+│   └── ...notatniki.ipynb
+├── Dockerfile
+├── requirements.txt
+└── README.md
+
+
+ML Flow + Dockerfile + pipeline
+
+Wersja PL
+
+Konfiguracja środowiska
+- Środowisko jest dostosowane do autoamtycznego startu i konfiguracji. W aktualnej wersji po starcie Codespace 
+    w pierwszej kolejności uruchamia się plik Dockerfile w którym zapisane są najważniejsze informacje dotyczące 
+    konfiguracji 
+- następnie uruchamiamy z terminala polecenie ./start.sh - to skrypt uruchamiający nam jupyter notebook oraz srodowisko 
+    (serwer) MLflow.
+- W pierwszej kolejności otwieramy MLflow - wystarczy z zakładki porty wybrać ten z numerem 5000 i w kolumnie 
+    "Adres przesyłany dalej" wybrać "Otwórz w przeglądarce" - po tym nastąpi uruchomienie web UI do werwera ML flow.
+- W następnej kolejności wybieramy JupyerLab (port 8000) i postępujemy w analogicznie jak przy MLflow.
+    UWAGA: Przy pierwszym uruchomieniu JupyterLab potrzebne jest hasło lub token do podłączenia.
+    Jeśli nie wiesz skąd go pobrać to w terminalu daj polecenie: jupyter lab list lub jupyter notebook list
+    Powinieneś zobaczyć coś takiego : http://127.0.0.1:8888/?token=abc123... skopiuj to co jest widoczne po znaku = 
+    i wklej w stronę JupyterNotebook (na samej górze strony) a następnie zatwierdź przyciskiem obok.
+- Ciesz się dockerem oraz środowiskiem MLflow
+- Po uruchomieniu JupyterLab pliki pipeline będą widoczne po lewej stroni. Można je uruchomić w odpowiedniej kolejności.
+    Po pobraniu danych z Kaggle, zrobieniu analizy oraz przygotowaniu wstępnym danych do pipelinu nie musisz już ponownie 
+    uruchamiać punktów 1 i 2.
+- Pipeline - wszystko co potrzeba jest w pliku numer 3. Możesz go modyfikować, zapisywać jako nowe eksperymenty, wybierać 
+    konkretne klasyfikatory  itp.
+- Miłej zabawy 
+
+EN wersion
+
+- The environment is configured for automatic startup and setup. In the current version, upon launching Codespace, the Dockerfile 
+    runs first, containing key configuration details.
+- Next, from the terminal, execute the command ./start.sh - this script launches Jupyter Notebook and the MLflow environment 
+    (server).
+- First, open MLflow: simply select the port numbered 5000 from the Ports tab, and under the "Forwarded Address" column, 
+    choose "Open in browser." This action opens the MLflow web UI.
+- Next, select JupyterLab (port 8000) and follow the same steps as with MLflow.
+    NOTE: Upon first launching JupyterLab, you'll need a password or token to connect. 
+    If unsure where to find it, type the following command in the terminal: jupyter lab list or jupyter notebook list
+    You should see something like: http://127.0.0.1:8888/?token=abc123... Copy everything visible after the = sign and paste 
+    it into the JupyterLab webpage (at the top of the page), then confirm by clicking the adjacent button.
+- Enjoy Docker and your MLflow environment.
+- Once JupyterLab is running, pipeline files will be visible on the left. You can run them in the appropriate order. 
+    After downloading data from Kaggle, performing analysis, and preparing the data pipeline initially, 
+    there is no need to repeat steps 1 and 2 again.
+- Pipeline – everything required is in file number 3. You can modify it, save it as new experiments, select specific classifiers, etc.
+- Have fun!
